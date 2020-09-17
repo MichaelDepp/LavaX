@@ -31,7 +31,7 @@ function Index() {
     if (loading) return <p>Loading</p>
     if (error) return <p>Error Loading</p>
     return (
-        <Indexcontent data={data}></Indexcontent>
+        <Indexcontent data={data.jobs}></Indexcontent>
     )
 }
 
