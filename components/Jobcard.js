@@ -1,22 +1,31 @@
 import Link from 'next/link';
 import Flag from 'react-flagkit';
+import Empty from "../components/Empty"
 import {useRouter} from "next/router"
 
 function Jobcard(props) {
     console.log("printing from job")
     console.log(props.data)
     const router = useRouter()
+
+
+    if (props.data.length <= 0) {
+        return (
+            <Empty></Empty>
+        )
+    }
+
     return (
         <>
             {props.data.map((job, id) => (
                 <Link key={id} href={{ pathname: '/job', query: { job: job.slug, com:job.company.slug } }}>
-                    <div key={id} className="flex items-center justify-between flex-wrap text-gray-700 bg-gray-100 px-4 py-2 mt-2 cursor-pointer">
+                    <div key={id} className="flex items-center justify-between flex-wrap text-primary bg-dark-100 px-4 py-2 mt-2 cursor-pointer">
                         <div className="flex">
                             <div className="box-content h-10 w-10 rounded-lg p-4 border-1 border-gray-400 bg-gray-200">
                                 <img src={job.company.logoUrl} />
                             </div>
                             <div className="ml-6">
-                                <div className="text-2xl font-bold text-txtdark">
+                                <div className="text-2xl font-bold text-primary">
                                     <p>{job.title}</p>
                                 </div>
                                 <div>

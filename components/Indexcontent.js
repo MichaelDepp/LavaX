@@ -35,10 +35,10 @@ class Indexcontent extends Component {
 
     render() {
         return (
-            <div className="bg-primary">
+            <div className="bg-dark-200">
                 <Layout handleSearchOption={this.handleSearchOption}>
                     <div className="mt-12">
-                        <p className="font-black text-3xl text-txtdark">Recent Jobs</p>
+                        <p className="font-black text-3xl text-primary">Recent Jobs</p>
                     </div>
                     {
                         this.state.sortjob ? <Jobcard data={this.state.sortjob}> </Jobcard> : <p>Loading</p>

@@ -1,8 +1,13 @@
+/* style.css */
+
 @tailwind base;
-
 @tailwind utilities;
-
 @tailwind components;
+
+.init {
+    height: 100%;
+    margin: 0;
+}
 
 .settingcus h2 {
     padding-top: 1em;

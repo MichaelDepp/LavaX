@@ -13,7 +13,9 @@ module.exports = {
       colors: {
         cyan: '#9cdbff',
         primary: '#FFFFFF',
-        dark: '#00102A',
+        dark: {
+          100: '#031430',
+          200: '#00102A'},
         button: '#304FFF',
         txtdark: '#242424',
         txtlight: '#F5F5F5',

@@ -27,7 +27,7 @@ function convertHtml(text) {
 
 function Jobinfo(props) {
     return (
-        <div>
+        <div className="text-primary">
             <div className="flex items-center justify">
                 <div className="box-content h-6 w-6 rounded-lg p-4 border-1 border-gray-400 bg-gray-200">
                     <img src={props.data.job.company.logoUrl} />

@@ -4,9 +4,9 @@ import Link from "next/link"
 function Navbar() {
     return (
         <nav className="flex items-center justify-between flex-wrap">
-            <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <div className="flex items-center flex-shrink-0 text-txtlight mr-6">
                 <Link href="/">
-                    <span className="font-sans font-bold text-xl text-txtdark cursor-pointer">LavaX</span>
+                    <span className="font-sans font-bold text-xl text-primary cursor-pointer">LavaX</span>
                 </Link>
             </div>
             <div className="lg:w-auto">
