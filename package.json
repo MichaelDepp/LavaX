@@ -19,7 +19,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flagkit": "^2.0.3",
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.0",
+    "showdown": "^1.9.1"
   },
   "devDependencies": {
     "tailwindcss": "^1.8.10"

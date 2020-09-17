@@ -3,3 +3,17 @@
 @tailwind utilities;
 
 @tailwind components;
+
+.settingcus h2 {
+    padding-top: 1em;
+    font-size: 1.875rem;
+}
+
+.settingcus h1 {
+    font-size: 1.875rem;
+}
+
+.settingcus ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}

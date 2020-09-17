@@ -1,21 +1,29 @@
 import Flag from 'react-flagkit';
 import ApplyBtn from "../components/ApplyBtn"
+import showdown from "showdown"
 
 function getdur(dur) {
     var d = new Date();
     let duryear = parseInt(dur.substring(0, 4))
     let nowyear = parseInt(d.getFullYear())
-  
+
     let yeardiff = nowyear - duryear
-  
+
     if (yeardiff == 0) {
-      return "Recently Posted"
+        return "Recently Posted"
     }
-    else{
-      return yeardiff + " Year Ago"
+    else {
+        return yeardiff + " Year Ago"
     }
-    
-  }
+
+}
+
+function convertHtml(text) {
+    const converter = new showdown.Converter()
+    let html = converter.makeHtml(text);
+
+    return html
+}
 
 function Jobinfo(props) {
     return (
@@ -33,13 +41,13 @@ function Jobinfo(props) {
             </div>
             <div className="flex my-16">
                 <div className="w-3/4">
-                    <div className="mb-10">
-                        <h2>Overview </h2>
-                        <p>{props.data.job.description}</p>
+                    <div className="mb-10 text-xl">
+                        <div className="settingcus" dangerouslySetInnerHTML={{__html: convertHtml(props.data.job.description)}}>
+                        </div>
                     </div>
                     <ApplyBtn link={props.data.job.applyUrl}></ApplyBtn>
                 </div>
-                <div className="ml-16 space-y-6">
+                <div className="ml-16 space-y-6 text-xl">
                     <div>
                         <span className="font-bold">Location</span>
                         {
