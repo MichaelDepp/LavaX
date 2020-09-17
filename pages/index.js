@@ -6,8 +6,10 @@ const RECENT_JOB = gql`
     jobs{
         title
         id
+        slug
         company{
           name
+          slug
           logoUrl
         }
         tags{
