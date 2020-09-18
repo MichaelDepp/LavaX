@@ -41,7 +41,6 @@ function Job() {
   });
   if (loading) return <p>Loading</p>
   if (error) return <p>Error Loading</p>
-  console.log(data)
   return (
     <div className="bg-dark-200">
       <div className="container p-6 bg-dark-200">
