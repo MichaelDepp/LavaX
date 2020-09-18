@@ -42,7 +42,6 @@ function Job() {
   if (error) return <p>Error Loading</p>
   console.log(data)
   return (
-    <div className="init bg-dark-200">
       <div className="container p-6 bg-dark-200">
         <Navbar></Navbar>
         <div className="mt-32">
@@ -50,7 +49,6 @@ function Job() {
           <Namecard></Namecard>
         </div>
       </div>
-    </div>
   )
 }
 

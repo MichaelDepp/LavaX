@@ -12,13 +12,11 @@ function Layout(props) {
     }
 
     return (
-        <div className="init bg-dark-200">
-            <div className="container p-6 bg-dark-200">
-                <Navbar></Navbar>
-                <Searchbar handleSearchOption={props.handleSearchOption}></Searchbar>
-                {props.children}
-                <Namecard></Namecard>
-            </div>
+        <div className="container p-6 bg-dark-200">
+            <Navbar></Navbar>
+            <Searchbar handleSearchOption={props.handleSearchOption}></Searchbar>
+            {props.children}
+            <Namecard></Namecard>
         </div>
     )
 }
