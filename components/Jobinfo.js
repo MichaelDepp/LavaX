@@ -25,6 +25,17 @@ function convertHtml(text) {
     return html
 }
 
+function isVowel(c) {
+    let check = c.charAt(0)
+    let res = ['a', 'e', 'i', 'o', 'u'].indexOf(check.toLowerCase()) !== -1
+    if (res) {
+        return "an"
+    }
+    else {
+        return "a"
+    }
+}
+
 function Jobinfo(props) {
     return (
         <div className="text-primary">
@@ -32,13 +43,13 @@ function Jobinfo(props) {
                 <div className="box-content h-6 w-6 rounded-lg p-4 border-1 border-gray-400 bg-gray-200 bg-cover" style={{ backgroundImage: "url(" + `${props.data.job.company.logoUrl ? props.data.job.company.logoUrl : "https://logo.clearbit.com/" + props.data.job.company.websiteUrl + "?size=200/"}` + ")" }}>
                 </div>
                 <div className="ml-6 w-auto text-2xl font-semibold">
-                    <p><strong>{props.data.job.company.name} </strong>is hiring an</p>
+                    <p><strong>{props.data.job.company.name} </strong>is hiring {isVowel(props.data.job.title)}</p>
                 </div>
             </div>
-            <div className="text-5xl md:text-6xl mt-5 font-black w-1/2 leading-tight">
+            <div className="text-5xl md:text-6xl mt-5 font-black leading-tight break-words">
                 <p>{props.data.job.title}</p>
             </div>
-            <div className="md:flex sm:block ">
+            <div className="md:flex sm:block break-words">
                 <div className="sm:w-full md:w-3/4">
                     <div className="md:mb-0 text-xl sm:mb-16">
                         <div className="settingcus text-justify mt-5" dangerouslySetInnerHTML={{ __html: convertHtml(props.data.job.description) }}>
