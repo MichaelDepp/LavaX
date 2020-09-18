@@ -11,6 +11,7 @@ const RECENT_JOB = gql`
           name
           slug
           logoUrl
+          websiteUrl
         }
         tags{
             name

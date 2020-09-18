@@ -29,8 +29,7 @@ function Jobinfo(props) {
     return (
         <div className="text-primary">
             <div className="flex items-center justify">
-                <div className="box-content h-6 w-6 rounded-lg p-4 border-1 border-gray-400 bg-gray-200">
-                    <img src={props.data.job.company.logoUrl} />
+                <div className="box-content h-6 w-6 rounded-lg p-4 border-1 border-gray-400 bg-gray-200 bg-cover" style={{ backgroundImage: "url(" + `${props.data.job.company.logoUrl ? props.data.job.company.logoUrl : "https://logo.clearbit.com/" + props.data.job.company.websiteUrl + "?size=200/"}` + ")" }}>
                 </div>
                 <div className="ml-6 text-2xl font-semibold">
                     <p><strong>{props.data.job.company.name} </strong>is hiring an</p>

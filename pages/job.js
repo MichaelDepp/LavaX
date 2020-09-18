@@ -12,6 +12,7 @@ query findJob($ep: JobInput!) {
         company{
           name
           logoUrl
+          websiteUrl
         }
         cities{
           name
