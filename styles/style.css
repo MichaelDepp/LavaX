@@ -11,6 +11,7 @@ body {
 .init {
     margin:0;
     padding:0;
+    height: 100vh;
     min-width: 1140px; 
     overflow-x: hidden;
 }

@@ -44,11 +44,11 @@ function Jobinfo(props) {
                         <div className="settingcus text-justify mt-5" dangerouslySetInnerHTML={{ __html: convertHtml(props.data.job.description) }}>
                         </div>
                     </div>
-                    <div className="invisible sm:pt-0 md:pt-10 lg:pt-10 xl:pt-10 md:visible lg:visible xl:visible">
+                    <div className="hidden sm:pt-0 md:pt-10 lg:pt-10 xl:pt-10 md:flex lg:flex xl:flex">
                         <ApplyBtn link={props.data.job.applyUrl}></ApplyBtn>
                     </div>
                 </div>
-                <div className="md:ml-16 space-y-6 text-xl sm:ml-0">
+                <div className="md:ml-16 mt-6 space-y-6 text-xl sm:ml-0">
                     <div>
                         <span className="font-bold">Location</span>
                         {

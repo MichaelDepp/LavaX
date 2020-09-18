@@ -46,7 +46,7 @@ function Job() {
     <div className="bg-dark-200">
       <div className="container p-6 bg-dark-200">
         <Navbar></Navbar>
-        <div className="mt-24">
+        <div className="mt-16 sm:mt-20 md:mt-32">
           <Jobinfo data={data}></Jobinfo>
           <Namecard></Namecard>
         </div>
