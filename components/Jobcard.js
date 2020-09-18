@@ -3,9 +3,6 @@ import Flag from 'react-flagkit';
 import Empty from "../components/Empty"
 
 function Jobcard(props) {
-    console.log("printing from job")
-    console.log(props.data)
-
     if (props.data.length <= 0) {
         return (
             <Empty></Empty>
@@ -41,7 +38,6 @@ function Jobcard(props) {
                             job.cities.slice(0, 1).map((city, id) => (
                                 <div key={id} className="hidden sm:hidden md:flex lg:flex xl:flex">
                                     <div>
-                                        {console.log(city.country.isoCode)}
                                         <Flag country={(city.country.isoCode).toUpperCase()}></Flag>
                                     </div>
                                     <p className="ml-2">{city.name}</p>

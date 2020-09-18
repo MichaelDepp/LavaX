@@ -26,16 +26,13 @@ class Indexcontent extends Component {
     }
 
     findSearchedJob(key) {
-        console.log("from search jobs " + key)
         const sort = this.props.data.filter(job => job.title.toLowerCase().includes(key.toLowerCase()))
-        this.setState({ sortjob: sort }, () => {
-            console.log(this.state.sortjob, 'searched result');
-        });
+        this.setState({ sortjob: sort })
     }
 
     render() {
         return (
-            <div className="bg-dark-200">
+            <div className="bg-dark-200 min-h-screen">
                 <Layout handleSearchOption={this.handleSearchOption}>
                     <div className="mt-12">
                         <p className="font-black text-3xl text-primary">Recent Jobs</p>

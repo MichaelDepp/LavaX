@@ -42,7 +42,7 @@ function Job() {
   if (loading) return <Spinner></Spinner>
   if (error) return <p>Error Loading</p>
   return (
-    <div className="bg-dark-200">
+    <div className="bg-dark-200 min-h-screen">
       <div className="container p-6 bg-dark-200">
         <Navbar></Navbar>
         <div className="mt-16 sm:mt-20 md:mt-32">
