@@ -1,4 +1,4 @@
-import { FiSun, FiMoon } from "react-icons/fi";
+import { MdFavorite } from "react-icons/md";
 import Link from "next/link"
 
 function Navbar() {
@@ -11,9 +11,9 @@ function Navbar() {
             </div>
             <div className="lg:w-auto">
                 <div>
-                    <button>
+                    <button className="text-primary">
                         <a href="/job">
-                            <FiMoon></FiMoon>
+                            <MdFavorite></MdFavorite>
                         </a>
                     </button>
                 </div>
