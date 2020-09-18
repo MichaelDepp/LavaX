@@ -31,7 +31,7 @@ function Jobinfo(props) {
             <div className="flex items-center justify">
                 <div className="box-content h-6 w-6 rounded-lg p-4 border-1 border-gray-400 bg-gray-200 bg-cover" style={{ backgroundImage: "url(" + `${props.data.job.company.logoUrl ? props.data.job.company.logoUrl : "https://logo.clearbit.com/" + props.data.job.company.websiteUrl + "?size=200/"}` + ")" }}>
                 </div>
-                <div className="ml-6 w-4/5 md:w-auto text-2xl font-semibold">
+                <div className="ml-6 w-auto text-2xl font-semibold">
                     <p><strong>{props.data.job.company.name} </strong>is hiring an</p>
                 </div>
             </div>
