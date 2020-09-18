@@ -42,13 +42,15 @@ function Job() {
   if (error) return <p>Error Loading</p>
   console.log(data)
   return (
+    <div className="bg-dark-200">
       <div className="container p-6 bg-dark-200">
         <Navbar></Navbar>
-        <div className="mt-32">
+        <div className="mt-24">
           <Jobinfo data={data}></Jobinfo>
           <Namecard></Namecard>
         </div>
       </div>
+    </div>
   )
 }
 

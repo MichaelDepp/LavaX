@@ -36,18 +36,20 @@ function Jobinfo(props) {
                     <p><strong>{props.data.job.company.name} </strong>is hiring an</p>
                 </div>
             </div>
-            <div className="text-6xl font-black w-1/2 leading-tight">
+            <div className="text-5xl md:text-6xl mt-5 font-black w-1/2 leading-tight">
                 <p>{props.data.job.title}</p>
             </div>
-            <div className="flex my-16">
-                <div className="w-3/4">
-                    <div className="mb-10 text-xl">
-                        <div className="settingcus" dangerouslySetInnerHTML={{__html: convertHtml(props.data.job.description)}}>
+            <div className="md:flex sm:block ">
+                <div className="sm:w-full md:w-3/4">
+                    <div className="md:mb-0 text-xl sm:mb-16">
+                        <div className="settingcus text-justify mt-5" dangerouslySetInnerHTML={{ __html: convertHtml(props.data.job.description) }}>
                         </div>
                     </div>
-                    <ApplyBtn link={props.data.job.applyUrl}></ApplyBtn>
+                    <div className="invisible sm:pt-0 md:pt-10 lg:pt-10 xl:pt-10 md:visible lg:visible xl:visible">
+                        <ApplyBtn link={props.data.job.applyUrl}></ApplyBtn>
+                    </div>
                 </div>
-                <div className="ml-16 space-y-6 text-xl">
+                <div className="md:ml-16 space-y-6 text-xl sm:ml-0">
                     <div>
                         <span className="font-bold">Location</span>
                         {
@@ -71,7 +73,9 @@ function Jobinfo(props) {
                             <p>{props.data.job.commitment.title}</p>
                         </div>
                     </div>
-                    <ApplyBtn link={props.data.job.applyUrl}></ApplyBtn>
+                    <div className="pt-2 text-center">
+                        <ApplyBtn link={props.data.job.applyUrl}></ApplyBtn>
+                    </div>
                 </div>
             </div>
         </div>
