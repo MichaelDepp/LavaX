@@ -12,7 +12,7 @@ function Navbar() {
             <div className="lg:w-auto">
                 <div>
                     <button className="text-primary">
-                        <Link href="/">
+                        <Link href="/fav">
                             <MdFavorite></MdFavorite>
                         </Link>
                     </button>
