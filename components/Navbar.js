@@ -5,9 +5,9 @@ function Navbar() {
     return (
         <nav className="flex items-center justify-between flex-wrap">
             <div className="flex items-center flex-shrink-0 text-txtlight mr-6">
-                <Link href="/">
+                <a href="/">
                     <span className="font-sans font-bold text-xl text-primary cursor-pointer">LavaX</span>
-                </Link>
+                </a>
             </div>
             <div className="lg:w-auto">
                 <div>
