@@ -4,6 +4,10 @@
 @tailwind utilities;
 @tailwind components;
 
+body {
+    margin: 0;
+}
+
 .init {
     margin:0;
     padding:0;
