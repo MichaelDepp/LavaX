@@ -16,6 +16,18 @@ body {
     overflow-x: hidden;
 }
 
+.loader {
+    height: 100vh;
+    position: relative;
+}
+
+.loader .cube {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .settingcus h2 {
     padding-top: 1em;
     font-size: 1.875rem;

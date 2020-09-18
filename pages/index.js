@@ -1,5 +1,6 @@
 import Indexcontent from "../components/Indexcontent"
 import { useQuery, gql } from "@apollo/client"
+import Spinner from "../components/Spinner"
 
 const RECENT_JOB = gql`
 {
@@ -31,7 +32,7 @@ const RECENT_JOB = gql`
 
 function Index() {
     const { loading, error, data } = useQuery(RECENT_JOB)
-    if (loading) return <p>Loading</p>
+    if (loading) return <Spinner></Spinner>
     if (error) return <p>Error Loading</p>
     return (
         <Indexcontent data={data.jobs}></Indexcontent>

@@ -1,9 +1,9 @@
-import Layout from "../components/Layout"
 import Jobinfo from "../components/Jobinfo"
 import Navbar from "../components/Navbar"
 import Namecard from "../components/Namecard"
 import { useRouter } from "next/router"
 import { useQuery, gql } from "@apollo/client"
+import Spinner from "../components/Spinner"
 
 const JOB_INFO = gql`
 query findJob($ep: JobInput!) {
@@ -39,7 +39,7 @@ function Job() {
   const { loading, error, data } = useQuery(JOB_INFO, {
     variables: { ep },
   });
-  if (loading) return <p>Loading</p>
+  if (loading) return <Spinner></Spinner>
   if (error) return <p>Error Loading</p>
   return (
     <div className="bg-dark-200">

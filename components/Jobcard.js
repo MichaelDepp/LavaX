@@ -1,13 +1,10 @@
 import Link from 'next/link';
 import Flag from 'react-flagkit';
 import Empty from "../components/Empty"
-import { useRouter } from "next/router"
 
 function Jobcard(props) {
     console.log("printing from job")
     console.log(props.data)
-    const router = useRouter()
-    let logolink = ""
 
     if (props.data.length <= 0) {
         return (
