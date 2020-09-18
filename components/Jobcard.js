@@ -21,11 +21,11 @@ function Jobcard(props) {
                 <Link key={id} href={{ pathname: '/job', query: { job: job.slug, com: job.company.slug } }}>
                     <div key={id} className="flex h-auto items-center justify-between flex-wrap text-primary bg-dark-100 px-4 py-2 mt-2 cursor-pointer">
                         <div className="flex">
-                            <div className="box-content resize-none h-10 w-10 rounded-lg p-4 bg-gray-200 bg-cover" style={{ backgroundImage: "url(" + `${job.company.logoUrl ? job.company.logoUrl : "https://logo.clearbit.com/" + job.company.websiteUrl + "?size=200/"}` + ")" }}>
+                            <div className="box-content h-10 w-10 rounded-lg p-4 bg-gray-200 bg-cover mr-6" style={{ backgroundImage: "url(" + `${job.company.logoUrl ? job.company.logoUrl : "https://logo.clearbit.com/" + job.company.websiteUrl + "?size=200/"}` + ")" }}>
                                 {/* <img src={job.company.logoUrl ? job.company.logoUrl : "https://logo.clearbit.com/" + job.company.websiteUrl + "?size=200/"} /> */}
                             </div>
-                            <div className="ml-6">
-                                <div className="sm:text-lg md:text-2xl font-bold text-primary">
+                            <div className="w-48 md:w-auto">
+                                <div className="text-lg md:text-2xl font-bold text-primary">
                                     <p>{job.title}</p>
                                 </div>
                                 <div>
