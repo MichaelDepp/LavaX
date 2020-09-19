@@ -46,7 +46,7 @@ function Jobinfo(props) {
                     <p><strong>{props.data.job.company.name} </strong>is hiring {isVowel(props.data.job.title)}</p>
                 </div>
             </div>
-            <div className="text-5xl md:text-6xl mt-5 font-black w-1/2 sm:w-auto leading-tight sm:break-words">
+            <div className="text-5xl md:text-6xl mt-5 font-black w-auto md:w-1/2 leading-tight break-words">
                 <p>{props.data.job.title}</p>
             </div>
             <div className="md:flex sm:block break-words">
