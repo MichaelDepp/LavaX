@@ -5,17 +5,17 @@ function Navbar() {
     return (
         <nav className="flex items-center justify-between flex-wrap">
             <div className="flex items-center flex-shrink-0 text-txtlight mr-6">
-                <a href="/">
+                <Link href="/">
                     <span className="font-sans font-bold text-xl text-primary cursor-pointer">LavaX</span>
-                </a>
+                </Link>
             </div>
             <div className="lg:w-auto">
                 <div>
-                    <button className="text-primary">
-                        <Link href="/fav">
+                    <Link href="/fav">
+                        <button className="text-primary">
                             <MdFavorite></MdFavorite>
-                        </Link>
-                    </button>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </nav>

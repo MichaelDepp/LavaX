@@ -10,6 +10,7 @@ function Jobcard(props) {
     }
 
     return (
+
         <>
             {props.data.map((job, id) => (
                 <Link key={id} href={{ pathname: '/job', query: { job: job.slug, com: job.company.slug } }}>
@@ -28,11 +29,15 @@ function Jobcard(props) {
                             </div>
                         </div>
                         <div className="flex text-center space-x-2 hidden sm:hidden md:flex lg:flex xl:flex">
-                            {job.tags.slice(0, 4).map((tag, id) => (
-                                <div key={id} className="border h-auto border-blue-400 text-blue-700 p-1 rounded relative">
-                                    <span className="flex-wrap sm:inline text-gray-500">{tag.name}</span>
-                                </div>
-                            ))}
+                            {job.tags.slice(0, 4).map((tag, id) => {
+                                if (tag.name.length > 2) {
+                                    return (
+                                        <div key={id} className="border h-auto border-blue-400 text-blue-700 p-1 rounded relative">
+                                            <span className="flex-wrap sm:inline text-gray-500">{tag.name}</span>
+                                        </div>
+                                    )
+                                }
+                            })}
                         </div>
                         {
                             job.cities.slice(0, 1).map((city, id) => (
